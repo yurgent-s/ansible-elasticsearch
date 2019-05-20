@@ -16,7 +16,7 @@ sudo yum install ansible -y
     
 sudo yum install git -y
 
-git clone --branch ansible-elasticsearch https://git.epam.com/Aleksei_Kioller/friends_day_19
+git clone https://github.com/yurgent-s/ansible-elasticsearch.git
 
 cd ansible-elasticsearch
 
