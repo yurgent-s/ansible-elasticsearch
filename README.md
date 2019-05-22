@@ -14,7 +14,7 @@ sudo yum install ansible -y
 
     2. Cloning repo with Elasticsearch playbook
     
-git clone --branch ansible-elasticsearch https://git.epam.com/Aleksei_Kioller/friends_day_19
+git clone --branch ansible-elasticsearch https://github.com/yurgent-s/ansible-elasticsearch
 
     3. Also execute following commands
 
