@@ -12,14 +12,22 @@ sudo yum install epel-release -y
     
 sudo yum install ansible -y
 
-    2. Install Git to clone this branch
+    2. Cloning repo with Elasticsearch playbook
     
-sudo yum install git -y
+git clone --branch ansible-elasticsearch https://git.epam.com/Aleksei_Kioller/friends_day_19
 
-git clone https://github.com/yurgent-s/ansible-elasticsearch.git
+    3. Also execute following commands
 
-cd ansible-elasticsearch
+mkdir -p roles
 
-    3. Start playbook
-    
+ansible-galaxy install elastic.elasticsearch,6.6.0 -p roles 
+
 ansible-playbook -i inventory playbook.yml --user=username --extra-vars "ansible_become_pass=password"
+
+    4. To make Elasticsearch be accessable from outside VM parse following commands in /etc/elasticsearch/node1/elasticsearch.yml : 
+    
+network.bind_host: 0.0.0.0
+
+transport.host: localhost
+
+transport.tcp.port: 9300
