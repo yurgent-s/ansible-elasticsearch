@@ -4,6 +4,7 @@
   hosts: node
   roles:
     - role: elastic.elasticsearch
+    
   vars:
     es_instance_name: "node1"
     es_data_dirs:
